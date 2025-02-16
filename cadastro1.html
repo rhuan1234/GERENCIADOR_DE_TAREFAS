@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gerenciamento de Tarefas</title>
+    <style>
+        /* Mesmos estilos básicos */
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        #container { width: 300px; }
+        input[type="text"], input[type="password"], input[type="date"] { width: 100%; padding: 8px; margin: 8px 0; }
+        button { width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+        #task-manager { display: none; }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+        <h2>Cadastro</h2>
+        <input type="text" id="nome" placeholder="Nome">
+        <input type="text" id="login" placeholder="Login">
+        <input type="password" id="senha" placeholder="Senha">
+        <button onclick="registrarUsuario()">Cadastrar</button>
+    </div>
+
+    <script src="classes.js"></script>
+    <script src="login.js"></script>
+    <script src="tarefas.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gerenciamento de Tarefas</title>
+    <style>
+        /* Mesmos estilos básicos */
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        #container { width: 300px; }
+        input[type="text"], input[type="password"], input[type="date"] { width: 100%; padding: 8px; margin: 8px 0; }
+        button { width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+        #task-manager { display: none; }
+        a {text-decoration: none;}
+    </style>
+</head>
+<body>
+    <div id="container">
+        
+        <div id="login-todo">
+        <h2>Login</h2>
+        <input type="text" id="login-usuario" placeholder="Login">
+        <input type="password" id="senha-usuario" placeholder="Senha">
+        <a href="cadastro1.html">Não possui cadastro?</a>
+        <button onclick="loginUsuario()">Entrar</button>
+    </div>
+        <div id="task-manager">
+            <h2>Gerenciamento de Tarefas</h2>
+            <input type="text" id="titulo-tarefa" placeholder="Título">
+            <input type="text" id="descricao-tarefa" placeholder="Descrição">
+            <input type="date" id="data-tarefa">
+            <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+            <ul id="lista-tarefas"></ul>
+
+            <h3>Filtrar Tarefas</h3>
+            <input type="date" id="filtro-inicio">
+            <input type="date" id="filtro-fim">
+            <button onclick="filtrarTarefas()">Filtrar</button>
+            <ul id="filtro-tarefas"></ul>
+            <button onclick="SalvarDeslogar()">Salvar/Deslogar</button>
+        </div>
+    </div>
+
+    <script src="classes.js"></script>
+    <script src="login.js"></script>
+    <script src="tarefas.js"></script>
+</body>
+</html>
+
